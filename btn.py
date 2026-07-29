@@ -11,13 +11,20 @@ class mes:
         root.geometry("640x480")
         self.labels=[]
         self.lab=[]
+        ft=0
+        tf=0
         for f in range(12):
             ff="empty"
             if f<len(self.runers):
                 ff=self.runers[f]
             else:
                 ff="f"+str(f)
-            self.labels.append(tk.Button(root,text=ff,command=lambda idx=f: self.f(idx)).pack(ipadx=10,ipady=10))
+            
+            self.labels.append(tk.Button(root,text=ff,command=lambda idx=f: self.f(idx)).grid(column=ft, row=tf,ipadx=10,ipady=10))
+            ft=ft+1
+            if ft>2:
+                ft=0
+                tf=tf+1
        
     def f(self,value:str):
         if value>=len(self.runers):
