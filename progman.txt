@@ -1,0 +1,8 @@
+
+notepad.exe
+explorer.exe
+pbrush.exe
+write.exe
+word.exe
+exel.exe
+edge.exe

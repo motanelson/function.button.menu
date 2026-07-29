@@ -24,8 +24,16 @@ class mes:
             print("error")
         else:
             os.system(self.runers[value])
-         
-runers=["notepad.exe","explorer.exe","pbrush.exe","write.exe","word.exe","exel.exe","edge.exe"]
+files="progman.txt"
+f1=open(files,"r")
+r=f1.read()
+f1.close()        
+r=r.split("\n")
+runers=[]
+for rr in r:
+   rr=rr.strip()
+   if rr!="":
+       runers.append(rr)
 root = tk.Tk()
 mesme=mes(root,runers)
 root.mainloop()
